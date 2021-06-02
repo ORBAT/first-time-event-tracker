@@ -1,7 +1,7 @@
 {
   "name": "First Time Event Tracker",
-  "url": "https://github.com/PostHog/first-time-event-tracker",
-  "description": "Track if a given event is the first event of this type for a user.",
+  "url": "https://github.com/ORBAT/first-time-event-tracker",
+  "description": "Track if a given event is the first event of this type for a user. Also captures session start events which include the previous session's length. A new session starts if 30min has passed from the user's previous event",
   "main": "index.js",
   "config": [
     {
@@ -11,8 +11,8 @@
       "key": "events",
       "name": "List of events to track first time occurences on:",
       "type": "string",
-      "default": "",
-      "hint": "Separate events with commas, without using spaces, like so: `event1,event2,event3`",
+      "default": "$pageview",
+      "hint": "Separate events with commas",
       "required": true
     }
   ]
